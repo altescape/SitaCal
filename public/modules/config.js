@@ -10,7 +10,8 @@ var ApplicationConfiguration = (function() {
     'ngAnimate',  
     'ngTouch',  
     'ngSanitize',
-    'ngRoute'];
+    'ngRoute',
+    'ngGravatar'];
 
   // Add a new vertical module
   var registerModule = function(moduleName, dependencies) {

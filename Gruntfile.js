@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'public/assets/stylesheets/app.css': 'public/assets/stylesheets/app.scss'
+          'public/assets/stylesheets/app.css': 'public/assets/stylesheets/app.scss',
         }
       } 
     },
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         files: {
-          'public/assets/stylesheets/app.css': 'public/assets/stylesheets/app.css' 
+          'public/assets/stylesheets/app.css': 'public/assets/stylesheets/app.css',
         }
       }
     },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       },
 
       css: {
-        files: ['public/assets/stylesheets/*.scss'],
+        files: ['public/assets/stylesheets/*.scss', 'public/modules/*/assets/css/*.scss'],
         tasks: ['sass', 'autoprefixer'],
         options: {
           spawn: false,

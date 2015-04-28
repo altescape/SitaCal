@@ -1,0 +1,12 @@
+<h3>Calculation</h3>
+<ul>
+  <li ng-repeat="cal in calculations">
+    <small>{{ cal.code }}</small>
+    <h3>{{ cal.name }}</h3>
+    <time datetime="{{ cal.edited }}">{{ cal.edited }}</time>
+    <p><a href="calculation/{{ cal._id }}">View calculation</a></p>
+  </li>
+</ul>
+<pre>
+{{ calculations }}
+</pre>

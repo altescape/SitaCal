@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('user').controller('UserController', ['$scope', 'User',
+angular.module('core').controller('NavController', ['$scope', 'User',
   function($scope, User) {
     $scope.user = User;
   }

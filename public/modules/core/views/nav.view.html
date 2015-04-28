@@ -5,23 +5,24 @@
       <li><a href="/">Home</a></li>
       <li><a href="user">User</a></li>
       <li><a href="home">Home</a></li>
+      <li><a href="my-calculations">Calculations</a></li>
     </ul>
-  </div>
-  <div class="user-panel">
-    <ul>
-      <li class="dropdown">
-        <a ng-click data-toggle="dropdown" class="dropdown-toggle">
-          <span class="user avatar">
-            <img src="{{ user.img }}">
-          </span>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </li>
-    </ul>
+    <div class="user-panel">
+      <ul>
+        <li class="dropdown" ng-class="{open:open}">
+          <a class="dropdown-toggle" ng-click="open=!open">
+            <span class="user avatar">
+              <gravatar email="user.email"></gravatar>
+            </span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 

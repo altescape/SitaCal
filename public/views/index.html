@@ -16,6 +16,8 @@
     
     <script src="libs/jquery.js"></script>
     <script src="libs/bootstrap.js"></script>
+    <script src="libs/ngGravatar.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
 
     <script src="modules/config.js"></script>
     <script src="modules/application.js"></script>
@@ -30,18 +32,44 @@
     <script src="modules/user/user.module.js"></script>
     <script src="modules/user/javascripts/config/user.routes.js"></script>
     <script src="modules/user/javascripts/controllers/user.controller.js"></script>
+    <script src="modules/user/javascripts/services/user.service.js"></script>
+    
+    <!-- calculations -->
+    <script src="modules/calculations/calculations.module.js"></script>
+    <script src="modules/calculations/javascripts/config/calculations.routes.js"></script>
+    <script src="modules/calculations/javascripts/controllers/calculations.controller.js"></script>
+    <script src="modules/calculations/javascripts/services/calculations.service.js"></script>
   </head>
   <body>
     
     <sita-page-nav></sita-page-nav>
+    
+    <div class="wrap content">
+      <div show-if="loaded">
 
-    <h1>Welcome</h1>
-    
-    <div ng-controller="HomeController">
-      <h2>{{ welcome_msg }}</h2>
+        <div class="cal-header wrap">
+          <div class="inner">
+            <div class="sita-dropdown">
+              <h2>
+                <gravatar email="user.email"></gravatar>
+                My Calculations
+              </h2>
+              <div class="menu">
+                <ul class="items">
+                  <li class="item"><a href="#">A repeating title</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h1>Welcome</h1>
+        <div ng-controller="HomeController">
+          <h2>{{ welcome_msg }}</h2>
+        </div>
+        <div ng-view></div>
+      </div>
     </div>
-    
-    <div ng-view></div>
 
   </body>
 </html>
