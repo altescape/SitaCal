@@ -9,8 +9,8 @@
     </ul>
     <div class="user-panel">
       <ul>
-        <li class="dropdown" ng-class="{open:open}">
-          <a class="dropdown-toggle" ng-click="open=!open">
+        <li class="dropdown" ng-class="{open:userMenuOpen}">
+          <a class="dropdown-toggle" ng-click="toggleUserMenu(); $event.stopPropagation();">
             <span class="user avatar">
               <gravatar email="user.email"></gravatar>
             </span>

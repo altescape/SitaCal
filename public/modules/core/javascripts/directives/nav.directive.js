@@ -5,8 +5,20 @@ angular.module('core').directive('sitaPageNav', function() {
        replace: true,
        restrict: 'E',
        templateUrl: 'modules/core/views/components/nav.view.html',
-       controller: function ($scope, User) {
+       controller: function ($window, $scope, User) {
          $scope.user = User;
+
+         $scope.toggleUserMenu = function () {
+           $scope.userMenuOpen = !$scope.userMenuOpen;
+         };
+
+         $window.onclick = function () {
+           if ($scope.userMenuOpen) {
+             $scope.userMenuOpen = false; 
+             $scope.$apply();
+           }
+         };
+
        } 
      };
    } 

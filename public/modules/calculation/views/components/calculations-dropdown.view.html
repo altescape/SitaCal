@@ -1,9 +1,9 @@
 <div class="calculations-dropdown fancy-dropdown">
-  <h2 class="root" ng-click="open=!open">
+  <h2 class="root" ng-click="toggleCalculationsDropdown(); $event.stopPropagation();">
     <span class="avatar"><gravatar email="user.email"></gravatar></span>
     My Calculations
   </h2>
-  <div class="menu" ng-class="{open:open}">
+  <div class="menu" ng-class="{open:calculationsDropdownOpen}">
     <ul class="items">
       <li class="item" ng-repeat="item in calculations">
         <a href="calculation/{{ item._id }}">
