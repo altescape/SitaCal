@@ -1,9 +1,14 @@
 @import "bootstrap";
 
+$success-color: #679E55;
+
 $nav-bg-color: #333C4E;
 $nav-bg-color-dark: darken($nav-bg-color, 10%);
 $nav-txt-color: #E8ECF4;
 $nav-txt-color-hover: lighten($nav-txt-color, 7%);
+
+$blue-grey: #778295;
+
 
 body, html { height: 100%; }
 body { 
@@ -15,6 +20,7 @@ body {
   color: #6E6E6E;
 }
 
+a {transition: all .05s linear;}
 .wrap {
   float: left;
   clear: both;
@@ -181,6 +187,217 @@ body {
         &:hover {
           color: mix($nav-bg-color, $nav-txt-color, 30%);
           background: 0 0;
+        }
+      }
+    }
+  }
+}
+
+.calculations-header {
+  $calculations-header-bg: #FFF;
+  background: $calculations-header-bg;
+  border-bottom: 1px solid mix($blue-grey, $calculations-header-bg, 10%);
+  padding: 25px 0;
+  position: relative;
+  z-index: 2;
+  margin: 0 0 25px;
+
+  h2 {
+    float: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: $blue-grey;
+    margin: 2px 0 0;
+  }
+  
+  .fancy-dropdown {
+    float: left;
+    margin: 10px 0 0 43px;
+    position: relative;
+
+    h2.root {
+      color: $blue-grey;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15px;
+      padding-right: 15px;
+      position: relative;
+
+      &:after {
+        width: 0;
+        height: 0;
+        border: 0 solid rgba(0, 0, 0, 0);
+        border-left: 3.5px solid rgba(0, 0, 0, 0);
+        border-right: 3.5px solid rgba(0, 0, 0, 0);
+        border-top: 3.5px solid lighten($blue-grey, 10%);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 6px 0 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: #5F697A;
+      }
+    }
+
+    div.menu {
+      background: $calculations-header-bg;
+      border-radius: 3px;
+      box-shadow: 0 0 1px rgba(72, 85, 110, 0.5),0 2px 6px rgba(50, 60, 78, 0.18);
+      display: none;
+      min-height: 100px;
+      min-width: 140px;
+      position: absolute;
+      top: 28px;
+      right: -16px;
+      z-index: 1;
+
+      &.open { display: block; }
+
+      &:before {
+        background: $calculations-header-bg;
+        border: 1px solid #E6E6ED;
+        content: "";
+        height: 10px;
+        position: absolute;
+        right: 12px;
+        top: -4px;
+        width: 10px;
+        transform: rotate(45deg);
+        z-index: 1;
+      }
+    }
+
+    ul.items {
+      background: $calculations-header-bg;
+      border-radius: 3px;
+      list-style: none;
+      margin: 0;
+      padding: 16px 18px 12px;
+      position: relative;
+      z-index: 2;
+
+      li.item {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: $blue-grey;
+        font-size: 13px;
+        line-height: 26px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      a.active, a.active:hover {
+        color: darken($blue-grey, 7%);
+        font-weight: 600;
+      } 
+    }
+  }
+
+  .calculations-dropdown {
+    margin: 0;
+    
+    &:before {
+      top: 0;
+      left: 0;
+      margin: -6px 0 0 20px;
+    }
+
+    .avatar {
+      border-radius: 2px;
+      float: left;
+      margin: 0 15px 0 0;
+      width: 29px;
+      height: 29px;
+
+      img {
+        border-radius: 2px;
+        width: 29px;
+        display: block;
+      }
+    }
+
+    h2.root {
+      font-size: 20px;
+      margin: 4px 0 0;
+      line-height: 29px;
+      padding: 0 20px 0 0;
+
+      &:after {
+        margin-top: 14px;
+      }
+    }
+
+    div.menu {
+      left: -13px;
+      min-width: 236px;
+      top: 51px;
+
+      &:before {
+        top: 0;
+        left: 0;
+        margin: -6px 0 0 24px;
+      }
+    }
+
+    ul.items {
+      padding: 19px 18px 1px;
+
+      li.item {
+        margin: 0 0 19px;
+      }
+
+      a {
+        font-size: 12px;
+        line-height: 20px;
+        position: relative;
+        text-transform: uppercase;
+        white-space: normal;
+        
+        small {
+          display: block;
+          text-transform: uppercase;
+          color: lighten($blue-grey, 14%);
+          font-size: 9px;
+          letter-spacing: 1px;
+
+          span { color: darken($blue-grey, 7%); }
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: darken($blue-grey, 7%);
+        }
+
+        &.btn.view-all-calculations {
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          background: mix($blue-grey, $calculations-header-bg, 15%);
+         
+          &:hover {
+            background: mix($blue-grey, $calculations-header-bg, 25%);
+          }
+        }
+      
+        &.btn.new-calculation {
+          letter-spacing: 1px;
+          background: $success-color;
+          color: $calculations-header-bg;
+          
+          &:hover {
+            background: darken($success-color, 7%);
+          }
+
         }
       }
     }

@@ -11,7 +11,9 @@ var ApplicationConfiguration = (function() {
     'ngTouch',  
     'ngSanitize',
     'ngRoute',
-    'ngGravatar'];
+    'ngGravatar',
+    'angularMoment'  
+  ];
 
   // Add a new vertical module
   var registerModule = function(moduleName, dependencies) {

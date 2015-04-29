@@ -1,0 +1,20 @@
+<div class="calculations-dropdown fancy-dropdown">
+  <h2 class="root" ng-click="open=!open">
+    <span class="avatar"><gravatar email="user.email"></gravatar></span>
+    My Calculations
+  </h2>
+  <div class="menu" ng-class="{open:open}">
+    <ul class="items">
+      <li class="item" ng-repeat="item in calculations">
+        <a href="calculation/{{ item._id }}">
+          <strong>{{ item.code }}</strong> - {{ item.name }}
+          <small><span am-time-ago="item.updated"></span>, in {{ item.currency }}</small>
+        </a>
+      </li>
+      <li class="actions">
+        <p><a href="#" class="btn view-all-calculations">View all calculations</a></p>
+        <p><a href="#" class="btn new-calculation">New Calculation</a></p>
+      </li>
+    </ul>
+  </div>
+</div>
