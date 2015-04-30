@@ -1,9 +1,9 @@
 <div class="calculations-dropdown fancy-dropdown">
-  <h2 class="root" ng-click="toggleCalculationsDropdown($event);" >
+  <h2 class="root" ng-click="toggleMyCalculationDropdown();" >
     <span class="avatar"><gravatar email="user.email"></gravatar></span>
     My Calculations
   </h2>
-  <div class="menu" ng-class="{open:calculationsDropdownOpen}">
+  <div class="menu" ng-class="{open:isMyCalculationDropdownVisible}">
     <ul class="items">
       <li class="item" ng-repeat="item in calculations">
         <a href="calculation/{{ item._id }}">

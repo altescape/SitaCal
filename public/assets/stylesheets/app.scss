@@ -305,12 +305,6 @@ a {transition: all .05s linear;}
 
   .calculations-dropdown {
     margin: 0;
-    
-    &:before {
-      top: 0;
-      left: 0;
-      margin: -6px 0 0 20px;
-    }
 
     .avatar {
       border-radius: 2px;
@@ -345,7 +339,7 @@ a {transition: all .05s linear;}
       &:before {
         top: 0;
         left: 0;
-        margin: -6px 0 0 24px;
+        margin: -6px 0 0 22px;
       }
     }
 
