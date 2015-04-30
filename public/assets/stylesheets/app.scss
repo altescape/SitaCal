@@ -20,6 +20,10 @@ body {
   color: #6E6E6E;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizelegibility;
+}
+
 a {transition: all .05s linear;}
 .wrap {
   float: left;
@@ -392,9 +396,96 @@ a {transition: all .05s linear;}
           &:hover {
             background: darken($success-color, 7%);
           }
-
         }
       }
+    }
+  }
+}
+
+.calculations-section {
+  padding-top: 32px;
+}
+.calculations-list {
+  padding: 0;
+  margin: 0;
+  width: 1200px;
+  float: left;
+  clear: both;
+  min-height: 100px;
+  color: $blue-grey;
+
+  li {
+    width: 370px;
+    height: 315px;
+    float: left;
+    padding: 0;
+    margin: 0 30px 30px 0;
+    position: relative;
+    list-style: none;
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(43, 59, 93, 0.29);
+  }
+
+  a {
+    color: $blue-grey;
+  }
+
+  .calculation-info {
+    text-align: center;
+    position: absolute;
+    height: 315px;
+    float: left;
+    clear: both;
+    width: 100%;
+    bottom: 0;
+    background: #FFF;
+    border-radius: 0 0 3px 3px;
+    transition: height .25s ease;
+    z-index: 1;
+    
+    .calculation-code {
+      text-transform: uppercase;
+      font-size: 110%;
+      display: block;
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #47506E;
+      font-weight: 400;
+      line-height: 23px;
+      margin: 28px 0 5px;
+      max-width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+      text-transform: capitalize;
+    }
+
+    .calculation-name {
+
+    }
+
+    .calculation-time {
+      margin-top: 70px;
+    }
+
+    .calculation-actions {
+
+    }
+
+    .hidden-info { 
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    
+    &:hover {
+      cursor: pointer;
+
+      .hidden-info { opacity: 1; }
     }
   }
 }

@@ -1,0 +1,19 @@
+<ul class="calculations-list">
+<li ng-repeat="item in calculations">
+  <div class="calculation-info">    
+    <small class="calculation-code">{{ item.code }}</small>
+    <h2 class="calculation-name">{{ item.name }}</h2>
+    <a href="calculation/{{ item._id }}" class="action-btn view-btn hidden-info">View Calculation</a>
+    <div class="calculation-time">
+      <time datetime="{{ item.edited | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a' }}">
+        <span am-time-ago="item.updated"></span>
+      </time>, in {{ item.currency }}
+    </div>
+    <div class="calculation-actions hidden-info">
+      <a href="calculation/{{ item._id }}/edit" class="action-btn resume-btn">Resume</a>
+      <a ng-click="copyCalculation()" class="action-btn copy-btn">Copy</a>
+      <a ng-click="deleteCalculation()" class="action-btn delete-btn">Delete</a>
+    </div>
+  </div>
+</li>
+</ul>

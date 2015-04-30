@@ -2,8 +2,8 @@ angular.module('calculation').factory('Calculations', function ($resource) {
   return [
     {
       "_id": 1231232132,
-      "name": "calculation One",
-      "code": "123",
+      "name": "Calculation One",
+      "code": "BAU",
       "currency": "USD",
       "exchange": 1.03,
       "term": 5,
@@ -15,8 +15,8 @@ angular.module('calculation').factory('Calculations', function ($resource) {
     },
     {
       "_id": 9812332132,
-      "name": "calculation Two",
-      "code": "456",
+      "name": "Calculation Two",
+      "code": "GBZ",
       "currency": "GBP",
       "exchange": 1.23,
       "term": 2,
@@ -28,8 +28,8 @@ angular.module('calculation').factory('Calculations', function ($resource) {
     },
     {
       "_id": 1123578532,
-      "name": "calculation Three",
-      "code": "789",
+      "name": "Calculation Three",
+      "code": "XCV",
       "currency": "USD",
       "exchange": 1.43,
       "term": 1,
