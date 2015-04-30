@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('calculation').directive('myCalculationsDropdown', function() {
+angular.module('calculation').directive('myCalculationsDropdown', ['$window', function($window) {
      return {
        replace: true,
        restrict: 'E',
@@ -9,7 +9,8 @@ angular.module('calculation').directive('myCalculationsDropdown', function() {
          $scope.user = User;
          $scope.calculations = Calculations;
 
-         $scope.toggleCalculationsDropdown = function () {
+         $scope.toggleCalculationsDropdown = function (event) {
+           event.stopPropagation();
            $scope.calculationsDropdownOpen = !$scope.calculationsDropdownOpen;
          };
 
@@ -19,8 +20,7 @@ angular.module('calculation').directive('myCalculationsDropdown', function() {
              $scope.$apply();
            }
          };
-
        } 
      };
-   } 
+   }] 
 );

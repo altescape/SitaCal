@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="assets/stylesheets/app.css">
     <base href="/">
     
+    <script src="libs/jquery.js"></script>
+    <script src="libs/bootstrap.js"></script>
+    
     <script src="libs/angular.js"></script>
     <script src="libs/angular-route.js"></script>
     <script src="libs/angular-resource.js"></script>
@@ -14,8 +17,6 @@
     <script src="libs/angular-sanitize.js"></script>
     <script src="libs/angular-touch.js"></script>
     
-    <script src="libs/jquery.js"></script>
-    <script src="libs/bootstrap.js"></script>
     <script src="libs/ngGravatar.js"></script>
     <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
     <script src="libs/moment.js"></script>
@@ -29,6 +30,7 @@
     <script src="modules/core/javascripts/config/core.routes.js"></script>
     <script src="modules/core/javascripts/controllers/core.controller.js"></script>
     <script src="modules/core/javascripts/directives/nav.directive.js"></script>
+    <script src="modules/core/javascripts/directives/user-dropdown.directive.js"></script>
     
     <!-- user -->
     <script src="modules/user/user.module.js"></script>
@@ -47,7 +49,7 @@
   </head>
   <body>
     
-    <sita-page-nav></sita-page-nav>
+    <core-nav></core-nav>
     
     <div class="wrap content">
       <div show-if="loaded">
