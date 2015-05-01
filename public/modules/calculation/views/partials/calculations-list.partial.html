@@ -3,14 +3,14 @@
   <div class="calculation-info">    
     <small class="calculation-code">{{ item.code }}</small>
     <h2 class="calculation-name">{{ item.name }}</h2>
-    <a href="calculation/{{ item._id }}" class="action-btn view-btn hidden-info">View Calculation</a>
+    <a href="calculations/{{ item._id }}" class="action-btn view-btn hidden-info">View Calculation</a>
     <div class="calculation-time">
       <time datetime="{{ item.edited | amDateFormat:'dddd, MMMM Do YYYY, h:mm:ss a' }}">
         <span am-time-ago="item.updated"></span>
       </time>, in {{ item.currency }}
     </div>
     <div class="calculation-actions hidden-info">
-      <a href="calculation/{{ item._id }}/edit" class="action-btn icon-btn resume-btn"><span>Resume</span></a>
+      <a href="calculations/{{ item._id }}/edit" class="action-btn icon-btn resume-btn"><span>Resume</span></a>
       <a ng-click="copyCalculation()" class="action-btn icon-btn copy-btn"><span>Copy</span></a>
       <a ng-click="deleteCalculation()" class="action-btn icon-btn delete-btn"><span>Delete</span></a>
     </div>

@@ -8,11 +8,26 @@
 
   .logo
     float: left
-    height: 23px
-    width: 27px
-    text-indent: -9999px
-    background-image: url()
-    margin: 20px 30px 0 0
+    height: 65px
+    width: 50px
+    margin: 0 20px 0 0
+    font-family: fontAwesome
+    color: rgba(0, 0, 0, 0)
+
+    span
+      transition: all .2s ease
+      display: block
+      width: 7px
+      height: 7px
+      margin-right: 5px
+      background: white
+      border-radius: 50%
+      float: left
+      margin-top: 28px
+
+    &:hover
+      span
+        background: mix(white, nav-bg-color, 50%)
 
   .nav
     margin: 16px 0 0 10px
