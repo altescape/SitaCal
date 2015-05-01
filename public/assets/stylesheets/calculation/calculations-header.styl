@@ -1,0 +1,103 @@
+/*
+ * CALCULATIONS HEADER 
+ */          
+.calculations-header
+  calculations-header-bg = #FFF
+  background: calculations-header-bg
+  border-bottom: 1px solid mix(blue-grey, calculations-header-bg, 10%)
+  padding: 25px 0
+  position: relative
+  z-index: 2
+  margin: 0 0 25px
+
+  h2
+    float: left
+    font-size: 22px
+    font-weight: 600
+    color: blue-grey
+    margin: 2px 0 0
+  
+  .fancy-dropdown
+    float: left
+    margin: 10px 0 0 43px
+    position: relative
+
+    h2.root
+      color: blue-grey
+      font-size: 13px
+      font-weight: 400
+      line-height: 15px
+      padding-right: 15px
+      position: relative
+
+      &:after
+        width: 0
+        height: 0
+        border: 0 solid rgba(0, 0, 0, 0)
+        border-left: 3.5px solid rgba(0, 0, 0, 0)
+        border-right: 3.5px solid rgba(0, 0, 0, 0)
+        border-top: 3.5px solid lighten(blue-grey, 10%)
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        margin: 6px 0 0
+
+      &:hover
+        cursor: pointer
+        color: #5F697A
+
+    div.menu
+      background: calculations-header-bg
+      border-radius: 3px
+      box-shadow: 0 0 1px rgba(72, 85, 110, 0.5),0 2px 6px rgba(50, 60, 78, 0.18)
+      display: none
+      min-height: 100px
+      min-width: 140px
+      position: absolute
+      top: 28px
+      right: -16px
+      z-index: 1
+
+      &.open
+        display: block
+
+      &:before
+        background: calculations-header-bg
+        border: 1px solid #E6E6ED
+        content: ""
+        height: 10px
+        position: absolute
+        right: 12px
+        top: -4px
+        width: 10px
+        transform: rotate(45deg)
+        z-index: 1
+
+    ul.items
+      background: calculations-header-bg
+      border-radius: 3px
+      list-style: none
+      margin: 0
+      padding: 16px 18px 12px
+      position: relative
+      z-index: 2
+
+      li.item
+        margin: 0
+        padding: 0
+
+      a
+        color: blue-grey
+        font-size: 13px
+        line-height: 26px
+        display: block
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+      a.active, a.active:hover
+        color: darken(blue-grey, 7%)
+        font-weight: 600
+
+      @import 'calculation-dropdown.styl'  

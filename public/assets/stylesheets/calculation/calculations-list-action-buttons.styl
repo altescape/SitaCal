@@ -1,0 +1,116 @@
+.calculation-actions
+  padding: 10px
+  overflow: hidden
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+
+.action-btn
+  width: 31px
+  height: 30px
+  border-radius: 2px
+  float: left
+  margin: 0 6px 0 0
+  border: 1px solid mix(#fff, blue-grey, 87%)
+  background: mix(#fff, blue-grey, 98%)
+  position: relative
+  color: #fff
+  line-height: 29px
+  font-weight: 600
+  text-transform: uppercase
+  overflow: hidden
+  font-size: 11px
+  text-indent: 0
+  transition: width .2s ease, background .2s ease
+
+  &:hover
+    text-decoration: none
+    border: 1px solid mix(#fff, blue-grey, 77%)
+    background: mix(#fff, blue-grey, 90%)
+
+  &.view-btn
+    width: initial
+    height: initial 
+    color: blue-grey
+    padding: 7px 14px
+    display: block
+    float: none
+    clear: both
+    margin: 20px auto 30px
+    width: 170px
+
+  &.delete-btn
+    float: right
+    margin: 0 0 0 6px
+
+.icon-btn
+  text-align: left
+  font-family: FontAwesome
+  
+  span
+    transition-delay: .2s
+    transition: opacity .2s ease
+    opacity: 0
+
+  &:before
+    content: "\f236"
+    text-align: center
+    width: 30px
+    height: 30px
+    display: block
+    float: left
+    color: blue-grey 
+  
+  &:hover
+    width: 95px
+    background: #778295
+    color: #FFF
+
+    span
+      opacity: 1 
+      float: left
+      width: 60px
+      overflow: hidden
+      white-space: nowrap
+      color: #fff
+      transition: opacity .2s ease
+      transition-delay: .2s
+
+    &:before
+      color: #fff
+
+  &.resume-btn
+    &:before
+      content: "\f106"
+    &:hover
+      background-color: success-color
+      border-color: darken(success-color, 7%)
+      width: 95px
+      span
+        width: 60px
+
+  &.copy-btn
+    &:before
+      content: "\f067"
+    &:hover
+      background-color: info-color
+      border-color: darken(info-color, 7%)
+      width: 78px
+      span
+        width: 40px
+
+  &.delete-btn
+    &:before
+      content: "\f068"
+    &:hover
+      background-color: error-color
+      border-color: darken(error-color, 7%)
+      width: 88px
+      span
+        width: 52px
+
+
+
+
+

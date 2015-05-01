@@ -1,0 +1,79 @@
+.calculations-dropdown
+  margin: 0
+
+  .avatar
+    border-radius: 2px
+    float: left
+    margin: 0 15px 0 0
+    width: 29px
+    height: 29px
+
+    img
+      border-radius: 2px
+      width: 29px
+      display: block
+
+  h2.root
+    font-size: 20px
+    margin: 4px 0 0
+    line-height: 29px
+    padding: 0 20px 0 0
+
+    &:after
+      margin-top: 14px
+
+  div.menu
+    left: -13px
+    min-width: 236px
+    top: 51px
+
+    &:before
+      top: 0
+      left: 0
+      margin: -6px 0 0 22px
+
+  ul.items
+    padding: 19px 18px 1px
+
+    li.item
+      margin: 0 0 19px
+
+    a
+      font-size: 12px
+      line-height: 20px
+      position: relative
+      text-transform: uppercase
+      white-space: normal
+      
+      small
+        display: block
+        text-transform: uppercase
+        color: lighten(blue-grey, 14%)
+        font-size: 9px
+        letter-spacing: 1px
+
+        span
+          color: darken(blue-grey, 7%) 
+
+      &:hover
+        text-decoration: none
+        color: darken(blue-grey, 7%)
+
+      &.btn.view-all-calculations
+        text-transform: uppercase
+        font-size: 10px
+        font-weight: 800
+        letter-spacing: 1px
+        background: mix(blue-grey, calculations-header-bg, 15%)
+       
+        &:hover
+          background: mix(blue-grey, calculations-header-bg, 25%)
+    
+      &.btn.new-calculation
+        letter-spacing: 1px
+        background: success-color
+        color: calculations-header-bg
+        
+        &:hover
+          background: darken(success-color, 7%)
+

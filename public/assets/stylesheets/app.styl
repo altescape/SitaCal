@@ -1,0 +1,52 @@
+@import 'variables.styl'
+
+body, html 
+  height: 100%
+
+body
+  background: #F9F9FB 
+  margin: 0
+  font-family: "Open Sans", "open-sans", sans-serif
+  font-size: 12px
+  line-height: 17px
+  color: #6E6E6E
+
+h1, h2, h3, h4, h5, h6
+  text-rendering: optimizelegibility
+
+a 
+  transition: all .05s linear
+  
+.wrap
+  float: left
+  clear: both
+  width: 100%
+  text-align: center
+  min-width: 1170px
+
+  .inner
+    width: 1170px
+    margin: 0 auto
+    text-align: left
+
+.dropdown-menu
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 1000
+  display: none
+  float: left
+  min-width: 160px
+  padding: 4px 0
+  margin: 1px 0 0
+  list-style: none
+  background-color: #FFF
+  border: 1px solid #CCC
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  border-radius: 5px
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+  background-clip: padding-box
+
+@import 'core/nav.styl'
+@import 'calculation/calculations-header.styl'
+@import 'calculation/calculations-list.styl' 

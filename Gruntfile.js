@@ -43,6 +43,22 @@ module.exports = function(grunt) {
         }
       } 
     },
+    
+    stylus: {
+      compile: {
+        options: {
+          compile: false,
+          linenos: true,
+          paths: ['public/assets/stylesheets/'],
+          import: ['vendor/bootstrap']
+        },
+        files: {
+          'public/assets/stylesheets/app.css': [
+            'public/assets/stylesheets/app.styl',
+          ]
+        }
+      }
+    },
 
     autoprefixer: {
       dist: {
@@ -54,7 +70,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ['public/assets/javascripts/*.js', 'public/modules/*.js', 'public/modules/*/javascripts/*.js'],
+        files: ['public/assets/javascripts/*.js', 'public/modules/*.js', 'public/modules/**/javascripts/*.js'],
         tasks: ['concat', 'uglify'],
         options: {
           spawn: false,
@@ -63,8 +79,12 @@ module.exports = function(grunt) {
       },
 
       css: {
-        files: ['public/assets/stylesheets/*.scss', 'public/modules/*/assets/css/*.scss'],
-        tasks: ['sass', 'autoprefixer'],
+        files: [
+          'public/assets/stylesheets/*.styl', 
+          'public/assets/stylesheets/**/*.styl', 
+          'public/modules/**/assets/stylesheets/*.styl'
+        ],
+        tasks: ['stylus', 'autoprefixer'],
         options: {
           spawn: false,
           livereload: true,
@@ -78,13 +98,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-devtools');
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'stylus', 'imagemin']);
 
   grunt.registerTask('dev', ['watch']);
 
