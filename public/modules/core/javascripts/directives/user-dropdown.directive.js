@@ -3,6 +3,7 @@
 angular.module('core').directive('userDropdown', ['$document', function($document) {
      return {
        restrict: 'E',
+       replace: true,
        templateUrl: 'modules/core/views/partials/user-dropdown.partial.html',
        link: function (scope, element, attr) {
           scope.isUserDropdownVisible = false;

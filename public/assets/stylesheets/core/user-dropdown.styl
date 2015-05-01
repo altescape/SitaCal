@@ -1,0 +1,87 @@
+.user-dropdown
+  color: #30373E
+  font-size: 13px
+  float: right
+
+  > ul
+    display: inline-block
+    margin: 0
+    font-size: 13px
+    font-weight: 300
+    list-style: none
+    padding: 0
+
+    > li
+      float: left
+      list-style: none
+      margin-left: 25px
+      padding: 23px 0
+
+      &.dropdown
+        margin-left: 25px
+        padding: 0
+
+      &.open, &:hover
+        .dropdown-toggle
+          background: nav-bg-color-dark
+          cursor: pointer
+
+        .dropdown-menu
+          display: block
+
+      a
+        color: nav-txt-color 
+        font-size: 13px
+        font-weight: 700
+
+        span.avatar
+          height: 32px!important
+          width: 34px
+          border-radius: 2px
+          overflow: hidden
+
+          img 
+            border-radius: 2px
+
+        &:hover
+          color: nav-txt-color-hover
+
+    .dropdown-toggle
+      margin-top: 10px
+      padding: 6px 6px 0
+      display: block
+      border-radius: 2px 2px 0 0
+      max-width: 48px
+      transition: none
+
+  .dropdown-menu
+    background: nav-bg-color-dark
+    padding: 0
+    margin: 0 0 0 -133px
+    border: 0
+    border-radius: 4px 0 4px 4px
+    width: 180px
+    box-shadow: none
+    z-index: 1050
+
+    li
+      clear: both
+      display: block
+      width: 100%
+
+    li:first-child a
+      border-top: 0
+
+    a
+      font-size: 13px
+      color: mix(nav-bg-color, nav-txt-color, 50%)
+      font-weight: 400
+      border-top: 1px solid darken(nav-bg-color, 7%)
+      padding: 0 20px
+      line-height: 42px
+      display: block
+
+      &:hover
+        color: mix(nav-bg-color, nav-txt-color, 30%)
+        background: 0 0
+
